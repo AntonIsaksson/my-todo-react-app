@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+//Components
+import Header from "./components/Header";
+import TodosList from "./components/TodosList";
+
+const data = [
+  {
+    id: 0,
+    title: 'Add Dummy Data',
+    description: 'Give the page some content',
+  },
+  {
+    id: 1,
+    title: '',
+    description: '',
+  },
+  {
+    id: 2,
+    title: '',
+    description: '',
+  },
+  {
+    id: 3,
+    title: '',
+    description: '',
+  },
+  {
+    id: 4,
+    title: '',
+    description: '',
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <TodosList data={data}/>
     </div>
   );
 }
